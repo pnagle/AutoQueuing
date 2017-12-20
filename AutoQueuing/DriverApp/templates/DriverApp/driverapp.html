@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Driver App - Driver id</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
         function getCookie(name) {
             var cookieValue = null;
             if (document.cookie && document.cookie !== '') {
@@ -40,6 +40,7 @@
             url = '/request/'
                 $.get('/request/'+pk, function (data) {
                     var u = '{"driver_id":'+did.toString()+', "status":"1"}';
+
                     alert("Previous assigned driverid- " + data.driver_id );
 
                     if (data.driver_id == null){
@@ -47,7 +48,7 @@
                             url: '/request/'+pk,
                             type: 'PUT',
                             dataType: 'json',
-                            data: '{"driver_id":'+did.toString()+', "status":"1"}',
+                            data: '{"driver_id":'+did.toString()+', "status":"1" }',
                             contentType: "application/json",
                             headers: {"X-HTTP-Method-Override": "PUT"},
                             withCredential:false,
@@ -64,84 +65,98 @@
                     }
                 });
             }
-        </script>
+
+    </script>
     <style>
 table, th, td {
     border: 1px solid black;
 }
-</style>
+
+    </style>
 </head>
 <body>
-<h1>Driver App - Driver id {{driver_id}}</h1><FORM><INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh"></FORM>
+<h1>Driver App - Driver id {{driver_id}}</h1>
+<FORM><INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh"></FORM>
 <div class="row">
     <div class="col-sm-4" style="background-color:lavender;">Waiting
-    {% if latest_request_list_waiting %}
-    <ul>
-    {% for request in latest_request_list_waiting %}
-        <table>
-            <tr><td>
-        <li>Request Id - {{ request.request_id }}</li>
-        <li>Customer Id - {{ request.customer_id }}</li>
-        <li>Status - {% if request.status == 0 %}
-                        Waiting
-                     {% endif %}
-        </li>
-            </td>
-            <td>
-            <input id="submit" type="button" value="Select" onclick="call_counter({{request.request_id}}, {{driver_id}});"/>
-            </td>
-            </tr>
+        {% if latest_request_list_waiting %}
+        <ul>
+            {% for request in latest_request_list_waiting %}
+            <table>
+                <tr>
+                    <td>
+                        <li>Request Id - {{ request.request_id }}</li>
+                        <li>Customer Id - {{ request.customer_id }}</li>
+                        <li>Requested At - {{request.humanizeTimeDiff}} ago</li>
+                        <li>Status - {% if request.status == 0 %}
+                            Waiting
+                            {% endif %}
+                        </li>
+                    </td>
+                    <td>
+                        <input id="submit" type="button" value="Select"
+                               onclick="call_counter({{request.request_id}}, {{driver_id}});"/>
+                    </td>
+                </tr>
 
-        </table>
-    {% endfor %}
-    </ul>
-    {% else %}
+            </table>
+            {% endfor %}
+        </ul>
+        {% else %}
         <p>No rides are available.</p>
-    {% endif %}
-</div>
+        {% endif %}
+    </div>
     <div class="col-sm-4" style="background-color:lavenderblush;">Ongoing
         {% if latest_request_list_ongoing %}
-    <ul>
-    {% for request in latest_request_list_ongoing %}
-        <table>
-            <tr><td>
-        <li>Request Id - {{ request.request_id }}</li>
-        <li>Customer Id - {{ request.customer_id }}</li>
-        <li>Status - {% if request.status == 1 %}
-                        Ongoing
-                     {% endif %}
-        </li>
-            </td>
-            </tr>
+        <ul>
+            {% for request in latest_request_list_ongoing %}
+            <table>
+                <tr>
+                    <td>
+                        <li>Request Id - {{ request.request_id }}</li>
+                        <li>Customer Id - {{ request.customer_id }}</li>
+                        <li>Requested At - {{request.humanizeTimeDiff}} ago</li>
+                        <li>Picked At - {{request.humanizePickedTimeDiff}} ago</li>
+                        <li>Status - {% if request.status == 1 %}
+                            Ongoing
+                            {% endif %}
+                        </li>
+                    </td>
+                </tr>
 
-        </table>
-    {% endfor %}
-    </ul>
-    {% else %}
+            </table>
+            {% endfor %}
+        </ul>
+        {% else %}
         <p>No rides are available.</p>
-    {% endif %}
-</div>
+        {% endif %}
+    </div>
     <div class="col-sm-4" style="background-color:lavender;">Complete
-            {% if latest_request_list_complete %}
-    <ul>
-    {% for request in latest_request_list_complete %}
-        <table>
-            <tr><td>
-        <li>Request Id - {{ request.request_id }}</li>
-        <li>Customer Id - {{ request.customer_id }}</li>
-        <li>Status - {% if request.status == 2 %}
-                        Completed
-                     {% endif %}
-        </li>
-            </td>
-            </tr>
+        {% if latest_request_list_complete %}
+        <ul>
+            {% for request in latest_request_list_complete %}
+            <table>
+                <tr>
+                    <td>
+                        <li>Request Id - {{ request.request_id }}</li>
+                        <li>Customer Id - {{ request.customer_id }}</li>
+                        <li>Requested At - {{request.humanizeTimeDiff}} ago</li>
+                        <li>Picked At - {{request.humanizePickedTimeDiff}} ago</li>
+                        <li>Completed At - {{request.humanizeCompletedTimeDiff}} ago</li>
 
-        </table>
-    {% endfor %}
-    </ul>
-    {% else %}
+                        <li>Status - {% if request.status == 2 %}
+                            Completed
+                            {% endif %}
+                        </li>
+                    </td>
+                </tr>
+
+            </table>
+            {% endfor %}
+        </ul>
+        {% else %}
         <p>No rides are available.</p>
-    {% endif %}
+        {% endif %}
     </div>
 </div>
 </body>

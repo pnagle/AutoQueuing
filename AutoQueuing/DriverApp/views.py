@@ -8,6 +8,7 @@ from .models import Request, Driver, Customer
 from rest_framework import mixins
 from rest_framework import generics
 from AutoQueuing import tasks
+from django.utils import timezone
 
 
 def index(request):
@@ -65,6 +66,10 @@ class request_detail(mixins.RetrieveModelMixin,
 
     def get(self,request,*args,**kwargs):
         return self.retrieve(request,*args,**kwargs)
+
+    def perform_update(self, serializer):
+        picked_at = timezone.now()
+        instance = serializer.save(picked_at=picked_at)
 
     def put(self, request, pk, *args, **kwargs):
         tasks.update_ongoing_request.apply_async((pk, ), countdown=6)
