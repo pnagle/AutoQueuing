@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver App - Driver id</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        var csrftoken = getCookie('csrftoken');
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+            function call_counter(pk) {
+            url = '/request/'
+                window.open(url);
+                $.get('/request/'+pk, function (data) {
+                    alert("counter updated!" + data.driver_id);
+                    if (data.driver_id == null){
+                    $.ajax({
+                            url: '/request/'+pk,
+                            type: 'PUT',
+                            dataType: 'json',
+                            data: '{"driver_id":"1", "status":"1"}',
+                            contentType: "application/json",
+                            headers: {"X-HTTP-Method-Override": "PUT"},
+                            withCredential:false,
+                            processData: false,
+
+                            success: function(result) {
+                                // Do something with the result
+                                alert("Assigned!" + result.driver_id);
+                            },
+                            error: function (xhr, textStatus, errorThrown) {
+                                console.log('Error in Operation' + errorThrown);
+                            }
+                        });
+                    }
+                });
+            }
+        </script>
+    <style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<h1>Driver App - Driver id {{driver_id}}</h1><FORM><INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh"></FORM>
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">Waiting
+    {% if latest_request_list_waiting %}
+    <ul>
+    {% for request in latest_request_list_waiting %}
+        <table>
+            <tr><td>
+        <li>Request Id - {{ request.request_id }}</li>
+        <li>Customer Id - {{ request.customer_id }}</li>
+        <li>Status - {% if request.status == 0 %}
+                        Waiting
+                     {% endif %}
+        </li>
+            </td>
+            <td>
+
+
+            <input id="submit" type="button" value="Select" onclick="call_counter({{request.request_id}});"/>
+            </td>
+            </tr>
+
+        </table>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No rides are available.</p>
+    {% endif %}
+</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">Ongoing
+        {% if latest_request_list_waiting %}
+    <ul>
+    {% for request in latest_request_list_ongoing %}
+        <table>
+            <tr><td>
+        <li>Request Id - {{ request.request_id }}</li>
+        <li>Customer Id - {{ request.customer_id }}</li>
+        <li>Status - {% if request.status == 1 %}
+                        Ongoing
+                     {% endif %}
+        </li>
+            </td>
+            </tr>
+
+        </table>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No rides are available.</p>
+    {% endif %}
+</div>
+    <div class="col-sm-4" style="background-color:lavender;">Complete</div>
+</div>
+</body>
+</html>
