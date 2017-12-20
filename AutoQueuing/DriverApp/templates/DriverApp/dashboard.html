@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<h1>Dashboard</h1>
+<FORM><INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh"></FORM>
+<div class="layout" style="width: 100%">
+    <div class="col-sm-4" style="background-color:lavender; width: 10%">Request ID
+        {% if latest_request_list %}
+        <ul>
+            {% for request in latest_request_list %}
+            <li>{{ request.request_id }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="col-sm-4" style="background-color:lavenderblush; width: 10%">Customer ID
+        {% if latest_request_list %}
+        <ul>
+            {% for request in latest_request_list %}
+                        <li>{{ request.customer_id }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="col-sm-4" style="background-color:lavender;">Time Elapsed
+        {% if latest_request_list %}
+        <ul>
+            {% for request in latest_request_list %}
+                        <li>{{ request.humanizeTimeDiff }} ago</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">Status
+        {% if latest_request_list %}
+        <ul>
+            {% for request in latest_request_list %}
+                        <li>{% if request.status == 1 %}
+                            Ongoing
+                            {% elif request.status == 0 %}
+                            Waiting
+                            {% elif request.status == 2 %}
+                            Completed
+                            {% endif %}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="col-sm-4" style="background-color:lavender; width: 10%">Driver
+        {% if latest_request_list %}
+        <ul>
+            {% for request in latest_request_list %}
+                        <li>{{ request.driver_id }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+</div>
+</body>
+</html>

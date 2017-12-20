@@ -21,16 +21,21 @@ def index(request):
         'latest_request_list_complete': latest_request_list.filter(driver_id=driverid).filter(status=2),
         'driver_id': driverid,
     }
-    if request.method == 'post':
-        print 'here'
     return HttpResponse(template.render(context, request))
 
 
 def customerApp(request):
     template = loader.get_template('DriverApp/customerapp.html')
     context = {}
-    if request.method == 'post':
-        print 'here'
+    return HttpResponse(template.render(context, request))
+
+
+def dashboardApp(request):
+    latest_request_list = Request.objects.order_by('-requested_at')
+    template = loader.get_template('DriverApp/dashboard.html')
+    context = {
+        'latest_request_list': latest_request_list,
+    }
     return HttpResponse(template.render(context, request))
 
 
