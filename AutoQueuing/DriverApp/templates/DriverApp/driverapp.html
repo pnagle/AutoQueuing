@@ -88,8 +88,6 @@ table, th, td {
         </li>
             </td>
             <td>
-
-
             <input id="submit" type="button" value="Select" onclick="call_counter({{request.request_id}}, {{driver_id}});"/>
             </td>
             </tr>
@@ -123,7 +121,28 @@ table, th, td {
         <p>No rides are available.</p>
     {% endif %}
 </div>
-    <div class="col-sm-4" style="background-color:lavender;">Complete</div>
+    <div class="col-sm-4" style="background-color:lavender;">Complete
+            {% if latest_request_list_complete %}
+    <ul>
+    {% for request in latest_request_list_complete %}
+        <table>
+            <tr><td>
+        <li>Request Id - {{ request.request_id }}</li>
+        <li>Customer Id - {{ request.customer_id }}</li>
+        <li>Status - {% if request.status == 2 %}
+                        Completed
+                     {% endif %}
+        </li>
+            </td>
+            </tr>
+
+        </table>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No rides are available.</p>
+    {% endif %}
+    </div>
 </div>
 </body>
 </html>

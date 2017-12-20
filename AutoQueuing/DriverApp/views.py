@@ -7,6 +7,7 @@ from rest_framework import permissions
 from .models import Request, Driver, Customer
 from rest_framework import mixins
 from rest_framework import generics
+from AutoQueuing import tasks
 
 
 def index(request):
@@ -65,5 +66,6 @@ class request_detail(mixins.RetrieveModelMixin,
     def get(self,request,*args,**kwargs):
         return self.retrieve(request,*args,**kwargs)
 
-    def put(self, request, *args, **kwargs):
+    def put(self, request, pk, *args, **kwargs):
+        tasks.update_ongoing_request.apply_async((pk, ), countdown=6)
         return self.update(request, *args, **kwargs)
