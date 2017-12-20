@@ -46,8 +46,8 @@ class Request(models.Model):
     picked_at = models.DateTimeField(null=True, blank=True)
     completed_at = models.DateTimeField(null=True, blank=True)
     status = models.IntegerField(choices=status_choices, default=0)
-    request_location_lat = models.DecimalField(max_digits=15, decimal_places=11)
-    request_location_long = models.DecimalField(max_digits=15, decimal_places=11)
+    request_location_lat = models.DecimalField(max_digits=15, decimal_places=11, null=True, blank=True)
+    request_location_long = models.DecimalField(max_digits=15, decimal_places=11, null=True, blank=True)
 
     def get_time_diff(self):
         # requested_at = datetime.datetime(Request.objects.filter(request_id=self.request_id).values('requested_at'))

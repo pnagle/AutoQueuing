@@ -20,6 +20,7 @@ from DriverApp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^driverapp/$', views.index),
+    url(r'^customerapp/$', views.customerApp),
     url(r'^request/$', views.request_list.as_view()),
     url(r'^request/(?P<pk>[0-9]+)$', views.request_detail.as_view(), name='request-update'),
 ]

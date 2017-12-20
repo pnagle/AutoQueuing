@@ -26,6 +26,14 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 
+def customerApp(request):
+    template = loader.get_template('DriverApp/customerapp.html')
+    context = {}
+    if request.method == 'post':
+        print 'here'
+    return HttpResponse(template.render(context, request))
+
+
 class RequestViewSet(viewsets.ModelViewSet):
 
     queryset = Request.objects.all()
@@ -72,5 +80,5 @@ class request_detail(mixins.RetrieveModelMixin,
         instance = serializer.save(picked_at=picked_at)
 
     def put(self, request, pk, *args, **kwargs):
-        tasks.update_ongoing_request.apply_async((pk, ), countdown=6)
+        tasks.update_ongoing_request.apply_async((pk, ), countdown=180)
         return self.update(request, *args, **kwargs)
