@@ -1,2 +1,2 @@
-web: gunicorn AutoQueuing.wsgi:application --log-file -
+web: gunicorn --pythonpath="$PWD/AutoQueuing" AutoQueuing.wsgi 
 
