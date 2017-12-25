@@ -74,7 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'AutoQueuing.wsgi.application'
 CORS_ORIGIN_ALLOW_ALL = True
-BROKER_URL = "amqp://pnagle:Welcome1@localhost//"
+BROKER_URL = "amqp://pnagle:Welcome1@139.59.243.245//"
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
