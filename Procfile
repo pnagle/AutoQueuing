@@ -1,2 +1,2 @@
-web: gunicorn AutoQueuing.wsgi --log-file -
+web: gunicorn AutoQueuing.wsgi:application --log-file -
 
