@@ -38,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/DriverApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
@@ -89,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -104,7 +104,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="261">
               <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
               <folding />
             </state>
@@ -190,16 +190,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RideQueuingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RideQueuingSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="RideQueuingSystem" />
@@ -671,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoQueuing/DriverApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -699,13 +681,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoQueuing/DriverApp/views.py">
+    <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="87" column="69" lean-forward="false" selection-start-line="87" selection-start-column="69" selection-end-line="87" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -715,6 +695,16 @@
           <caret line="9" column="98" lean-forward="false" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoQueuing/DriverApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="87" column="69" lean-forward="false" selection-start-line="87" selection-start-column="69" selection-end-line="87" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
