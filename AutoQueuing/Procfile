@@ -1,2 +1,3 @@
-web: gunicorn AutoQueuing.wsgi:application --log-file -
+web: gunicorn --pythonpath="$PWD/AutoQueuing" AutoQueuing.wsgi 
+worker: celery -A AutoQueuing worker -l info
 
