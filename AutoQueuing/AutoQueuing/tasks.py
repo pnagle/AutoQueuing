@@ -7,6 +7,7 @@ from celery.contrib import rdb
 @celery.task
 def update_ongoing_request(pk):
     rdb.set_trace()
+    print "pk entered" + pk
 
     if pk is not None:
         try:
