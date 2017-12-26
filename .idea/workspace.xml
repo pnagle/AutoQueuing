@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1781bfb2-692c-41d7-a2f5-13cffaf8b99e" name="Default" comment="" />
+    <list default="true" id="1781bfb2-692c-41d7-a2f5-13cffaf8b99e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" afterPath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,8 +96,8 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -165,8 +167,8 @@
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/templates/DriverApp/dashboard.html" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/views.py" />
-        <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/celeryapp.py" />
+        <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
       </list>
     </option>
   </component>
@@ -703,8 +705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
