@@ -85,5 +85,5 @@ class request_detail(mixins.RetrieveModelMixin,
         instance = serializer.save(picked_at=picked_at)
 
     def put(self, request, pk, *args, **kwargs):
-        tasks.update_ongoing_request.apply_async((pk, ), countdown=10)
+        tasks.update_ongoing_request.apply_async((pk, ), countdown=300)
         return self.update(request, *args, **kwargs)
