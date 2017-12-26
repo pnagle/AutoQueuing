@@ -10,8 +10,8 @@ def update_ongoing_request(pk):
 
     if pk is not None:
         try:
-            rdb.set_trace()
             d = Request.objects.filter(request_id=pk).update(status=2, completed_at=timezone.now())
+            print 'Out' + d
             rdb.set_trace()
             print "pkpkkp" + pk
             if d >= 1:
