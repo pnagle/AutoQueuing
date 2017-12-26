@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1781bfb2-692c-41d7-a2f5-13cffaf8b99e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" afterPath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/requirements.txt" afterPath="$PROJECT_DIR$/AutoQueuing/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" afterPath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -104,12 +103,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="94" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+              <folding>
+                <element signature="e#312#321#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,11 +165,11 @@
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/templates/DriverApp/customerapp.html" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/urls.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/templates/DriverApp/dashboard.html" />
-        <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/views.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/celeryapp.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/requirements.txt" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
+        <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" />
       </list>
     </option>
   </component>
@@ -556,7 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -695,14 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="76" column="51" lean-forward="false" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoQueuing/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -717,6 +712,16 @@
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
