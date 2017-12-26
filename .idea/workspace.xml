@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1781bfb2-692c-41d7-a2f5-13cffaf8b99e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" afterPath="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoQueuing/requirements.txt" afterPath="$PROJECT_DIR$/AutoQueuing/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,18 +70,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding>
-                <element signature="e#644#676#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="celeryapp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/celeryapp.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +85,21 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="99" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="99" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutoQueuing/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,6 +167,7 @@
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/settings.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/DriverApp/views.py" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/celeryapp.py" />
+        <option value="$PROJECT_DIR$/AutoQueuing/requirements.txt" />
         <option value="$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py" />
       </list>
     </option>
@@ -703,10 +703,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AutoQueuing/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AutoQueuing/AutoQueuing/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="99" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="99" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
